@@ -25,11 +25,11 @@ for file in "$directory"/*; do
     for folder in $onesignalFolderNames; do
         mkdir -p "$destinationFolder/$folder"
     done
-        convert "images/bw/tr_${filename}" -resize 32x32 "$destinationFolder/drawable-hdpi/ic_stat_onesignal_default.png"
-        convert "images/bw/tr_${filename}" -resize 24x24 "$destinationFolder/drawable-mdpi/ic_stat_onesignal_default.png"
-        convert "images/bw/tr_${filename}" -resize 48x48 "$destinationFolder/drawable-xhdpi/ic_stat_onesignal_default.png"
-        convert "images/bw/tr_${filename}" -resize 72x72 "$destinationFolder/drawable-xxhdpi/ic_stat_onesignal_default.png"
-        convert "images/bw/tr_${filename}" -resize 92x92 "$destinationFolder/drawable-xxxhdpi/ic_stat_onesignal_default.png"
+        convert "images/bw/tr_${filename}" -resize 32x32 -depth 8 "$destinationFolder/drawable-hdpi/ic_stat_onesignal_default.png"
+        convert "images/bw/tr_${filename}" -resize 24x24 -depth 8 "$destinationFolder/drawable-mdpi/ic_stat_onesignal_default.png"
+        convert "images/bw/tr_${filename}" -resize 48x48 -depth 8 "$destinationFolder/drawable-xhdpi/ic_stat_onesignal_default.png"
+        convert "images/bw/tr_${filename}" -resize 72x72 -depth 8 "$destinationFolder/drawable-xxhdpi/ic_stat_onesignal_default.png"
+        convert "images/bw/tr_${filename}" -resize 92x92 -depth 8 "$destinationFolder/drawable-xxxhdpi/ic_stat_onesignal_default.png"
 
 #    convert input.png -resize 32x32 -depth 8 rgba:output.png
     #      java -jar $imageTracer "images/bw/$filename" outfilename "$outputdir/${filename}.svg" numberofcolors 2 ltres 1 qtres 1 pathomit 8 colorsampling 1 mincolorratio 0.02 colorquantcycles 3 scale 1 simplifytolerance 0 roundcoords 1 lcpr 0 qcpr 0 desc 1 viewbox 0 blurradius 0 blurdelta 20
