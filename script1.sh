@@ -18,7 +18,7 @@ for file in "$directory"/*; do
 
 #      java -jar $imageTracer "$directory/$filename" outfilename "$outputdir/${filename}.svg" numberofcolors 2
       convert "$directory/$filename" -monochrome "images/bw/$filename"
-      convert "images/bw/$filename" -transparent black "images/bw/tr_${filename}"
+      convert "images/bw/$filename" -transparent white "images/bw/tr_${filename}"
 #      java -jar $imageTracer "images/bw/$filename" outfilename "$outputdir/${filename}.svg" numberofcolors 2 ltres 1 qtres 1 pathomit 8 colorsampling 1 mincolorratio 0.02 colorquantcycles 3 scale 1 simplifytolerance 0 roundcoords 1 lcpr 0 qcpr 0 desc 1 viewbox 0 blurradius 0 blurdelta 20
 
 #    fi
